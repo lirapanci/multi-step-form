@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+<body class="bg-bg font-ubuntu ">
+<main class="box bg-none md:bg-white max-w-[940px] mx-0 md:mx-auto my-0 md:my-[105px] rounded-2xl ">
+  <div class="block md:flex justify-between items-center">
+    <!-- STEPS -->
+    <div class="bg-purple rounded-none md:rounded-lg m-0 md:my-4 md:ml-4 pt-0 md:pt-10 h-[172px] md:h-auto flex items-center justify-center md:block mobile-img">
+      <!-- STEP 1-->
+      <div class="uppercase flex items-center px-0 md:px-8" id="step1">
+        <div class="step active rounded-full flex justify-center items-center w-[33px] h-[33px] border-white border mr-4 text-white font-bold"> 1</div>
+        <div>
+          <span class="text-light-blue text-xs hidden md:block">Step 1</span>
+          <h2 class="text-white font-bold text-sm hidden md:block">Your Info</h2>
+        </div>
+      </div>
+
+      <!-- STEP 2-->
+      <div class="uppercase flex items-center px-0 md:px-8 md:pt-8" id="step2">
+        <div class="step rounded-full flex justify-center items-center w-[33px] h-[33px] border-white border mr-4 text-white font-bold">2</div>
+        <div>
+          <span class="text-light-blue text-xs hidden md:block">Step 2</span>
+          <h2 class="text-white font-bold text-sm hidden md:block">Select Plan</h2>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="uppercase flex items-center px-0 md:px-8 md:pt-8" id="step3">
+        <div class="step rounded-full flex justify-center items-center w-[33px] h-[33px] border-white border mr-4 text-white font-bold">3</div>
+
+        <div>
+          <span class="text-light-blue text-xs hidden md:block">Step 3</span>
+          <h2 class="text-white font-bold text-sm hidden md:block">Add-Ons</h2>
+        </div>
+      </div>
+
+      <!--STEP 4 -->
+      <div class="uppercase flex items-center px-0 md:px-8 md:pt-8" id="step4">
+        <div class="step rounded-full flex justify-center items-center w-[33px] h-[33px] border-white border mr-4 text-white font-bold">4</div>
+        <div>
+          <span class="text-light-blue text-xs hidden md:block">Step 4</span>
+          <h2 class="text-white font-bold text-sm hidden md:block">Summary</h2>
+        </div>
+      </div>
+
+      <!-- Image-->
+      <div class="hidden md:block">
+        <svg width="274" height="268" viewBox="0 0 274 268" fill="none" xmlns="http://www.w3.org/2000/svg" class="rounded-lg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M-34.6921 243.101C3.24693 332.538 168.767 385.017 211.961 312.52C255.155 240.023 145.862 226.867 107.226 151.951C68.5909 77.0349 38.5692 30.2769 -17.2556 47.3443C-73.0804 64.4116 -72.6312 153.664 -34.6921 243.101Z" fill="#6259FF"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M233.095 301.153C293.774 272.875 325.934 157.627 274.97 129.625C224.005 101.622 217.573 177.204 166.911 205.612C116.249 234.02 84.771 255.819 97.867 293.853C110.963 331.887 172.416 329.431 233.095 301.153Z" fill="#F9818E"/>
+          <path d="M165.305 169.097L175.912 158.291" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="bevel"/>
+          <path d="M209.461 174.581L196.955 164.078" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="bevel"/>
+          <path d="M187.56 188.991L180.652 203.789" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="bevel"/>
+          <path d="M0.304688 246.891C37.3078 246.891 67.3047 216.894 67.3047 179.891C67.3047 142.888 37.3078 112.891 0.304688 112.891C-36.6984 112.891 -66.6953 142.888 -66.6953 179.891C-66.6953 216.894 -36.6984 246.891 0.304688 246.891Z" fill="#FFAF7E"/>
+        </svg>
+      </div>
+
+
+    </div>
+
+    <!--FORM-->
+    <div class="px-4 md:px-[100px] mx-auto md:mb-8 md:mt-14 pt-8 md:pt-0 bg-white items-center rounded-2xl w-full">
+
+      <!-- STEP 1 - Form-->
+      <div class="px-6 md:px-0 form" id="personalInfo">
+        <div>
+          <h3 class="text-denim font-bold text-3xl pb-2.5">Personal info</h3>
+          <p class="text-gray">Please provide your name, email address, and phone number.</p>
+        </div>
+
+        <!--        Form-->
+        <div class="text-denim text-sm pt-4">
+          <form action="personal_info">
+            <div class="pb-6">
+              <label for="name" class="">Name</label> </br>
+              <input type="text" id="name" placeholder="e.g. Stephen King" class="form-input mt-2 border-light-gray border rounded-lg px-4 py-2.5 w-full font-semibold" >
+            </div>
+            <div class="pb-6">
+              <label for="email" class="">Email Address</label> </br>
+              <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" class="form-input mt-2 border-light-gray border rounded-lg px-4 py-2.5 w-full font-semibold" >
+            </div>
+            <div class="pb-6">
+              <label for="phone" class="">Phone Number</label> </br>
+              <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" class="form-input mt-2 border-light-gray border rounded-lg px-4 py-2.5 w-full font-semibold" >
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- STEP 2 - Form-->
+      <div class="px-6 md:px-0 form hidden" id="planOptions">
+        <div>
+          <h3 class="text-denim font-bold text-3xl pb-2.5">Select your plan</h3>
+          <p class="text-gray">You have the option of monthly or yearly billing.</p>
+        </div>
+
+        <!-- Form-->
+        <div class="pt-4 md:py-10 block md:flex md:justify-between md:space-x-4">
+
+          <!-- Option 1 -->
+          <div class="w-full">
+            <input type="radio" id="arcade" name="plan" value="arcade" class="plan-input form-input">
+            <label for="arcade" class="options">
+              <div class="px-4 pt-4 w-full flex items-center md:block">
+                <div class="pr-3.5">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="20" fill="#FFAF7E"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.953 12.4916C23.2 13.9311 22.374 15.3391 20.9971 15.826V18.0051H18.9979V15.826C17.6209 15.3391 16.795 13.9311 17.0419 12.4916C17.2889 11.0522 18.537 10 19.9975 10C21.458 10 22.7061 11.0522 22.953 12.4916ZM18.9979 18.0051V24.0025H20.9971V18.0051H24.9954C25.5474 18.0051 25.9949 18.4526 25.9949 19.0046V29.0004C25.9949 29.5525 25.5474 30 24.9954 30H14.9996C14.4475 30 14 29.5525 14 29.0004V19.0046C14 18.4526 14.4475 18.0051 14.9996 18.0051H18.9979ZM18.9979 27.0013H16.9987V25.0021H18.9979V27.0013Z" fill="white"/>
+                  </svg>
+                </div>
+                <div class="md:pt-8">
+                  <h3 class="pb-2 text-denim font-bold plan-name">Arcade</h3>
+                  <span class="text-gray text-sm plan-data">$ <span class="plan-price">9</span>/<span class="plan-duration">mo</span></span>
+                </div>
+              </div>
+
+            </label>
+          </div>
+
+          <!-- Option 2 -->
+          <div class="w-full">
+            <input type="radio" id="advanced" name="plan" value="advanced" class="plan-input form-input">
+            <label for="advanced" class="options">
+              <div class="px-4 pt-4 w-full flex items-center md:block">
+                <div class="pr-3.5">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="20" fill="#F9818E"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9437 15H25.0567C27.7897 15 30 17.0294 30 19.8847C30 22.7419 27.7897 24.8214 25.0566 24.8214H14.9437C12.2117 24.8214 10 22.7419 10 19.8847C10 17.0294 12.2117 15 14.9437 15ZM17.2662 20.625C17.3919 20.625 17.5 20.5087 17.5 20.3883H17.5V19.3997C17.5 19.2792 17.3942 19.1964 17.2689 19.1964H15.7143V17.6445C15.7143 17.5187 15.598 17.4107 15.4776 17.4107H14.489C14.3685 17.4107 14.2857 17.5166 14.2857 17.6418V19.1964H12.7024C12.5856 19.1964 12.5 19.2921 12.5 19.4094V20.3659C12.5 20.4864 12.5907 20.625 12.717 20.625H14.2857V22.2083C14.2857 22.3251 14.3813 22.4107 14.4987 22.4107H15.4552C15.5757 22.4107 15.7143 22.32 15.7143 22.1937V20.625H17.2662ZM22.8467 20.7806C22.3674 20.7806 21.9783 20.3973 21.9783 19.9256C21.9783 19.4539 22.3674 19.0699 22.8467 19.0699C23.3281 19.0699 23.7171 19.4539 23.7171 19.9256C23.7171 20.3973 23.3281 20.7806 22.8467 20.7806ZM23.8778 21.7954C23.8778 22.2666 24.2669 22.6474 24.7462 22.6474C25.2276 22.6474 25.6166 22.2666 25.6166 21.7954C25.6166 21.3205 25.2275 20.9404 24.7462 20.9404C24.2669 20.9404 23.8778 21.3204 23.8778 21.7954ZM24.7462 18.9114C24.2669 18.9114 23.8778 18.5284 23.8778 18.0567C23.8778 17.5849 24.2669 17.2009 24.7462 17.2009C25.2275 17.2009 25.6166 17.5849 25.6166 18.0567C25.6166 18.5284 25.2276 18.9114 24.7462 18.9114ZM25.7777 19.9256C25.7777 20.3973 26.1667 20.7806 26.6456 20.7806C27.125 20.7806 27.514 20.3973 27.514 19.9256C27.514 19.4539 27.125 19.0699 26.6456 19.0699C26.1667 19.0699 25.7777 19.4539 25.7777 19.9256Z" fill="white"/>
+                  </svg>
+                </div>
+                <div class="md:pt-8">
+                  <h3 class="pb-2 text-denim font-bold plan-name">Advanced</h3>
+                  <span class="text-gray text-sm plan-data">$ <span class="plan-price">12</span>/<span class="plan-duration">mo</span></span>
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Option 3 -->
+          <div class="w-full">
+            <input type="radio" id="pro" name="plan" value="pro" class="plan-input form-input">
+            <label for="pro" class="options">
+              <div class="px-4 pt-4 w-full flex items-center md:block">
+                <div class="pr-3.5">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="20" fill="#483EFF"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3336 13H26.6664C28.5073 13 29.9996 14.4923 29.9996 16.3332V23.5263C30.0204 24.9435 29.1714 26.229 27.8597 26.7662C26.6224 27.2684 25.2033 26.9495 24.2998 25.9662L21.4799 22.9996H18.5201L15.7002 25.9662C14.7957 26.9478 13.3778 27.2664 12.1403 26.7662C10.8286 26.229 9.97962 24.9435 10.0004 23.5263V16.3332C10.0004 14.4923 11.4927 13 13.3336 13ZM16.0001 18.9998H17.3334C17.7016 18.9998 18.0001 18.7013 18.0001 18.3331C18.0001 17.965 17.7016 17.6665 17.3334 17.6665H16.0001V16.3332C16.0001 15.965 15.7017 15.6666 15.3335 15.6666C14.9653 15.6666 14.6669 15.965 14.6669 16.3332V17.6665H13.3336C12.9654 17.6665 12.6669 17.965 12.6669 18.3331C12.6669 18.7013 12.9654 18.9998 13.3336 18.9998H14.6669V20.3331C14.6669 20.7012 14.9653 20.9997 15.3335 20.9997C15.7017 20.9997 16.0001 20.7012 16.0001 20.3331V18.9998ZM24.6665 20.9997C23.1938 20.9997 21.9999 19.8058 21.9999 18.3331C21.9999 16.8604 23.1938 15.6666 24.6665 15.6666C26.1392 15.6666 27.3331 16.8604 27.3331 18.3331C27.3331 19.0404 27.0521 19.7186 26.552 20.2187C26.052 20.7188 25.3737 20.9997 24.6665 20.9997ZM24.6665 19.6664C25.4028 19.6664 25.9998 19.0695 25.9998 18.3331C25.9998 17.5968 25.4028 16.9999 24.6665 16.9999C23.9301 16.9999 23.3332 17.5968 23.3332 18.3331C23.3332 19.0695 23.9301 19.6664 24.6665 19.6664Z" fill="white"/>
+                  </svg>
+                </div>
+                <div class="md:pt-8">
+                  <h3 class="pb-2 text-denim font-bold plan-name">Pro</h3>
+                  <span class="text-gray text-sm plan-data">$ <span class="plan-price">15</span>/<span class="plan-duration">mo</span></span>
+                </div>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- Monthly/Yearly-->
+        <div class="font-bold bg-very-light-gray text-gray flex justify-center my-6 md:my-8 py-3.5 rounded-lg text-sm">
+          <span class="">Monthly</span>
+          <label class="switch mx-6">
+            <input type="checkbox" id="toggle">
+            <span class="slider round"></span>
+          </label>
+          <span>Yearly</span>
+        </div>
+
+      </div>
+
+      <!-- STEP 3 - Form-->
+      <div class="px-6 md:px-0 form hidden" id="addOn">
+        <div>
+          <h3 class="text-denim font-bold text-3xl pb-2.5">Pick add-ons</h3>
+          <p class="text-gray">Add-ons help enhance your gaming experience.</p>
+        </div>
+
+        <!-- Form-->
+        <div class="py-10">
+          <div class="">
+            <div class="border border-light-gray rounded-lg flex px-6 py-[18px] mb-4">
+              <label class="container flex">
+                <input type="checkbox" class="add-ons-checkbox" name="add-ons-checkbox" value="online-service">
+                <div class="w-full mx-6 flex items-center justify-between">
+                  <div class="">
+                    <h4 class="text-denim font-bold text-sm md:text-base add-on-name"> Online Service</h4>
+                    <span class="text-gray text-xs md:text-sm">Access to multiplayer games</span>
+                  </div>
+                  <div class="text-purple text-xs md:text-sm">
+                    <p class="add-on-data">+$<span class="add-on-price">1</span>/ <span class="add-on-duration">mo</span></p>
+                  </div>
+                </div>
+
+              </label>
+            </div>
+            <div class="border border-light-gray rounded-lg flex px-6 py-[18px] mb-4">
+              <label class="container flex">
+                <input type="checkbox" class="add-ons-checkbox" name="add-ons-checkbox" value="larger-storage">
+                <div class="w-full mx-6 flex items-center justify-between">
+                  <div class="">
+                    <h4 class="text-denim font-bold text-sm md:text-base add-on-name"> Larger storage</h4>
+                    <span class="text-gray text-xs md:text-sm">Extra 1TB of cloud save</span>
+                  </div>
+                  <div class="text-purple text-xs md:text-sm">
+                    <p class="add-on-data">+$<span class="add-on-price">2</span>/ <span class="add-on-duration">mo</span></p>
+                  </div>
+                </div>
+
+              </label>
+            </div>
+            <div class="border border-light-gray rounded-lg flex px-6 py-[18px]">
+              <label class="container flex">
+                <input type="checkbox" class="add-ons-checkbox" name="add-ons-checkbox" value="customizable-profile">
+                <div class="w-full mx-6 flex items-center justify-between">
+                  <div class="">
+                    <h4 class="text-denim font-bold text-sm md:text-base add-on-name">Customizable profile</h4>
+                    <span class="text-gray text-xs md:text-sm">Custom theme on your profile</span>
+                  </div>
+                  <div class="text-purple text-xs md:text-sm">
+                    <p class="add-on-data">+$<span class="add-on-price">2</span>/ <span class="add-on-duration">mo</span></p>
+                  </div>
+                </div>
+
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- STEP 4 - Summary-->
+      <div class="px-6 md:px-0 form hidden" id="summary">
+        <div class="">
+          <h3 class="text-denim font-bold text-3xl py-2.5">Finishing up</h3>
+          <p class="text-gray">Double-check everything looks OK before confirming.</p>
+        </div>
+
+        <!-- Form-->
+        <div class="py-10">
+          <div class="bg-very-light-gray px-6 rounded-lg py-2">
+            <div class="flex items-center justify-between border-b border-gray border-opacity-20 pb-6">
+              <div class="text-denim font-medium">
+                <h4 class="pb-2">
+                  <span class="confirmation-plan"></span>
+                  <span class="confirmation-period"></span>
+                </h4>
+                <button class="hover:underline text-gray text-sm font-normal" id="change-btn">
+                  Change
+                </button>
+              </div>
+              <div class="font-bold text-denim">
+                <span>$ <span class="confirmation-price"></span>/<span class="confirmation-period-ab"></span></span>
+              </div>
+            </div>
+            <div class="flex justify-between text-sm py-2 add-ons-confirmed online-service hidden">
+              <h4 class="text-gray confirmation-add-ons-name"></h4>
+              <span class="text-denim confirmation-add-ons-data">+$<span class="confirmation-add-ons-price"></span>/<span class="confirmation-add-ons-period"></span></span>
+            </div>
+
+            <div class="flex justify-between text-sm py-2 add-ons-confirmed larger-storage hidden">
+              <h4 class="text-gray confirmation-add-ons-name"></h4>
+              <span class="text-denim confirmation-add-ons-data">+$<span class="confirmation-add-ons-price"></span>/<span class="confirmation-add-ons-period"></span></span>
+            </div>
+
+            <div class="flex justify-between text-sm py-2 add-ons-confirmed customizable-profile hidden">
+              <h4 class="text-gray confirmation-add-ons-name"></h4>
+              <span class="text-denim confirmation-add-ons-data">+$<span class="confirmation-add-ons-price"></span>/<span class="confirmation-add-ons-period"></span></span>
+            </div>
+
+          </div>
+          <div class="flex justify-between p-6 text-sm text-gray">
+            <h4>Total</h4>
+            <span class="text-purple text-lg font-bold">$ <span class="total-price"></span>/<span class="total-period"></span></span>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Thank You      -->
+      <div class="md:px-0 mx-6 text-center flex flex-col items-center hidden form" id="thanks">
+        <div class="">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-center">
+            <circle cx="40" cy="40" r="40" fill="#F9818E"/>
+            <path d="M48.4643 79.1667C49.2318 79.0173 49.9948 78.8455 50.7523 78.6515C52.0371 78.2933 53.3033 77.8711 54.5461 77.3865C55.7914 76.9044 57.0119 76.3603 58.203 75.7562C59.3936 75.1495 60.5532 74.4835 61.6773 73.7609C62.7997 73.0395 63.8853 72.2626 64.9301 71.4329C65.9775 70.6013 66.9826 69.7177 67.9417 68.7854C68.8981 67.8555 69.8075 66.8783 70.6664 65.8575C71.5274 64.8358 72.3367 63.7715 73.0913 62.6688C73.8451 61.5676 74.5435 60.4294 75.1838 59.2584C75.8236 58.0862 76.4045 56.8826 76.9242 55.6524C77.4451 54.4219 77.9042 53.1662 78.2996 51.8898C78.6378 50.7727 78.9271 49.6413 79.1666 48.4989L55.3739 24.6977C51.1311 20.4532 45.5904 18.3333 40.0423 18.3333C34.4939 18.3333 28.9406 20.4529 24.6977 24.6977C16.2118 33.1867 16.2118 46.9026 24.6977 55.3915L48.4643 79.1667Z" fill="#E96170"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M55.3136 24.6843C51.0784 20.4488 45.5416 18.3333 40.0032 18.3333C34.4648 18.3333 28.9215 20.4488 24.6862 24.6843C16.2156 33.1554 16.2156 46.8423 24.6862 55.3134C33.1568 63.7844 46.8431 63.7844 55.3136 55.3134C63.7842 46.8423 63.7842 33.1554 55.3136 24.6843ZM48.9956 33.6772C49.2455 33.4824 49.552 33.3612 49.8675 33.3323L49.8675 33.3323C49.9238 33.3294 49.9803 33.3294 50.0366 33.3323C51.4237 33.3521 52.1147 35.5287 50.9931 36.3451L37.6672 46.34C37.0328 46.8135 36.0542 46.7432 35.494 46.1839L28.831 39.5206C27.5563 38.2966 29.9626 35.8902 31.1865 37.165L36.8279 42.8067L48.9956 33.6772Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="pt-8">
+          <h4 class="font-bold text-2xl md:text-[32px] text-denim pb-3.5">Thank you!</h4>
+          <p class="text-gray leading-6 py-3.5 text-center">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+        </div>
+
+      </div>
+
+      <!-- NAVIGATION-->
+        <div id="navigation" class="flex justify-between items-center">
+          <div class="m-4 md:m-0 ">
+            <button class="hidden text-gray hover:text-denim" id="back">Go Back</button>
+          </div>
+
+          <div class="m-4 md:m-0 ">
+            <button class="bg-denim text-white px-4 md:px-6 py-3 md:py-3.5 rounded-lg hover:bg-blue" id="next">Next Step</button>
+            <button class="hidden bg-purple text-white px-4 md:px-6 py-3 md:py-3.5 rounded-lg hover:bg-light-purple" id="confirm">Confirm</button>
+          </div>
+        </div>
+    </div>
+
+  </div>
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
