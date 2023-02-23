@@ -8,7 +8,7 @@
 
 /* Form Styles */
 
-@media (max-width: 300px) {
+@media only screen and (max-width: 768px) {
     .mobile-img{
         background-image: url('/assets/images/bg-sidebar-mobile.svg');
         background-size: cover;
