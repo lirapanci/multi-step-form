@@ -907,7 +907,7 @@ video {
 
 @media (max-width: 768px) {
   .mobile-img{
-    background-image: url('/images/bg-sidebar-mobile.svg');
+    background-image: url('/assets/images/bg-sidebar-mobile.svg');
     background-size: cover;
   }
 }
